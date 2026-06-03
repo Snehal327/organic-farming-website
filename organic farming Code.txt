@@ -1,0 +1,528 @@
+Index Code:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Organic Farming Website</title>
+<style> body {
+margin: 0;
+font-family: Arial, sans-serif;
+}
+
+/* Header and Nav */ header {
+background-color: #3ba34d; color: white;
+text-align: center; padding: 15px 0;
+}
+nav {
+background-color: #2d8b3f; text-align: center; padding: 10px 0;
+}
+nav a {
+color: white;
+text-decoration: none; margin: 0 15px;
+font-weight: bold;
+}
+nav a:hover {
+text-decoration: underline;
+}
+
+/* Main Section */ main {
+text-align: center; padding: 50px 20px;
+}
+button {
+background-color: #3ba34d; color: white;
+padding: 10px 20px;
+
+border: none; border-radius: 5px; cursor: pointer;
+}
+button:hover {
+background-color: #2d8b3f;
+}
+
+/* Footer */ footer {
+background-color: #3ba34d; color: white;
+padding: 30px; display: flex;
+justify-content: space-around;
+}
+footer div { width: 30%;
+}
+footer a { color: white;
+text-decoration: none;
+}
+footer a:hover {
+text-decoration: underline;
+}
+
+/* Login Section */ #loginSection {
+display: none; text-align: center; padding: 80px 20px;
+background-color: #eaf9ea;
+}
+.login-box { background: white;
+display: inline-block; padding: 30px;
+border-radius: 10px;
+box-shadow: 0px 0px 10px #888;
+}
+input {
+padding: 10px; margin: 10px; width: 250px;
+
+border: 1px solid #ccc; border-radius: 5px;
+}
+</style>
+</head>
+<body>
+
+<!-- HOME PAGE -->
+<div id="homePage">
+<header>
+<h1>Organic Farming Website</h1>
+</header>
+
+<nav>
+<a href="#">Home</a>
+<a href="newsletter.html">Newsletter</a>
+<a href="#">Blog</a>
+<a href="#">Success Stories</a>
+<a href="#">E-Commerce</a>
+<a href="#">Crop Calendar</a>
+<a href="#">Forum</a>
+</nav>
+
+<main>
+<h2>Welcome</h2>
+<p>Explore our features and services for sustainable organic farming.</p>
+<hr style="width:40%">
+<h3>About the Project</h3>
+    <p>The Organic Farming Project promotes eco-friendly farming methods, improves soil health, and helps farmers grow high-quality organic produce.</p>
+<button onclick="showLogin()">Login</button>
+</main>
+
+<footer>
+<div>
+<h4>About Organic Farming</h4>
+       <p>Promoting sustainable and organic farming practices for healthy communities and environment.</p>
+</div>
+<div>
+<h4>Quick Links</h4>
+<p>
+<a href="#">About Us</a><br>
+<a href="#">Contact</a><br>
+<a href="#">Privacy Policy</a><br>
+
+<a href="#">Terms of Service</a>
+</p>
+</div>
+<div>
+<h4>Follow Us</h4>
+<p><a href="#">Facebook</a> | <a href="#">Twitter</a> |
+<a href="#">Instagram</a> | <a href="#">LinkedIn</a></p>
+</div>
+</footer>
+</div>
+
+<!-- LOGIN PAGE (inside same file) -->
+<div id="loginSection">
+<div class="login-box">
+<h2>Login to Continue</h2>
+<form id="loginForm">
+<input type="email" id="email" placeholder="Enter your Email" required><br>
+       <input type="password" id="password" placeholder="Enter your Password" required><br>
+<button type="submit">Next</button>
+</form>
+<p><a href="#" onclick="backHome()">? Back to Home</a></p>
+</div>
+</div>
+
+<script>
+// Show Login Section function showLogin() {
+document.getElementById("homePage").style.display = "none"; document.getElementById("loginSection").style.display = "block";
+}
+
+// Back to Home function backHome() {
+document.getElementById("homePage").style.display = "block"; document.getElementById("loginSection").style.display = "none";
+}
+
+// Handle Login Submission document.getElementById("loginForm").addEventListener("submit", function(e) {
+e.preventDefault();
+const email = document.getElementById("email").value; const pass = document.getElementById("password").value;
+
+if (email && pass) {
+
+
+
+
+2. Newsletter
+
+
+.back-home:hover {
+text-decoration: underline;
+}
+
+.content {
+background-color: #f8fff8; text-align: center; padding: 40px;
+font-size: 16px;
+}
+
+input[type="email"] { padding: 8px; width: 250px;
+border: 1px solid #aaa; border-radius: 4px;
+}
+
+button.subscribe-btn { background-color: #43a047; color: white;
+border: none; padding: 8px 16px; margin-left: 5px; cursor: pointer; border-radius: 4px;
+}
+
+button.subscribe-btn:hover { background-color: #2e7d32;
+}
+
+footer {
+background-color: #2e7d32; color: white;
+padding: 20px;
+text-align: center; font-size: 14px;
+}
+
+footer a { color: #b3e5fc;
+text-decoration: none;
+}
+
+footer a:hover {
+text-decoration: underline;
+}
+
+.next-btn { position: fixed; right: 20px; bottom: 20px;
+background-color: #43a047; color: white;
+border: none; border-radius: 4px; padding: 8px 16px; cursor: pointer; font-size: 14px;
+}
+
+.next-btn:hover { background-color: #2e7d32;
+}
+</style>
+</head>
+<body>
+
+<header>
+Newsletter Subscription
+<br>
+<a href="index.html" class="back-home">?? Back to Home</a>
+</header>
+
+<div class="content">
+    <p>Sign up with your email to get updates about new crops, workshops, and offers.</p>
+<form id="subscribeForm">
+<input type="email" id="email" placeholder="Enter your email" required>
+<button type="submit" class="subscribe-btn">Subscribe</button>
+</form>
+<p id="message" style="color:green; font-weight:bold; margin-top:10px;"></p>
+</div>
+
+<footer>
+<p>(c) 2025 Organic Farming Website | All Rights Reserved</p>
+<p><strong>About Organic Farming</strong><br>
+       Promoting sustainable and organic farming practices for healthy communities and environment.
+
+</p>
+<p><strong>Quick Links</strong><br>
+<a href="#">About Us</a> |
+<a href="#">Contact</a> |
+<a href="#">Privacy Policy</a> |
+<a href="#">Terms of Service</a>
+</p>
+<p><strong>Follow Us</strong><br>
+<a href="#">Facebook</a> |
+<a href="#">Twitter</a> |
+<a href="#">Instagram</a> |
+<a href="#">LinkedIn</a>
+</p>
+</footer>
+
+<button class="next-btn" onclick="goNext()">Next ?</button>
+
+<script>
+// Handle form submission document.getElementById("subscribeForm").addEventListener("submit",
+function(event) {
+event.preventDefault();
+const email = document.getElementById("email").value; if (email.trim() !== "") {
+         document.getElementById("message").textContent = "Thank you for subscribing!";
+document.getElementById("subscribeForm").reset();
+} else {
+         document.getElementById("message").textContent = "Please enter a valid email.";
+}
+});
+
+// Handle Next button click function goNext() {
+window.location.href = "blog.html"; // change to your next page link
+}
+</script>
+
+</body>
+</html>
+
+
+3. Blog
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Blog Section & Guide</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1>Blog Section & Guide</h1>
+<a href="index.html">?? Back to Home</a>
+</header>
+
+<section class="blog">
+<article>
+<h3>Tips for Composting</h3>
+<p>Learn how to create nutrient-rich compost for organic farming.</p>
+</article>
+<article>
+<h3>Pest Control Naturally</h3>
+<p>Discover natural ways to protect crops from pests without chemicals.</p>
+</article>
+</section>
+
+<div class="nav-buttons">
+<a href="success.html" class="next-btn">Next ?</a>
+</div>
+</body>
+
+</html>
+<footer>
+<div class="footer-section">
+<h3>About Organic Farming</h3>
+       <p>Promoting sustainable and organic farming practices for healthy communities and environment.</p>
+</div>
+<div class="footer-section">
+<h3>Quick Links</h3>
+<a href="about.html">About Us</a>
+<a href="contact.html">Contact</a>
+<a href="privacy.html">Privacy Policy</a>
+<a href="terms.html">Terms of Service</a>
+</div>
+<div class="footer-section">
+<h3>Follow Us</h3>
+
+
+
+
+4. Success Stories
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Farmer Success Stories</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1>Farmer Success Stories</h1>
+<a href="index.html"> Back to Home</a>
+</header>
+<section>
+<div class="success-story">
+<p>"Ramesh from Vangali, i doubled my income in three years by transitioning to organic farming practices, which involve reducing costs and increasing yields through sustainable methods like using vermicompost and green manures
+</div>
+- Ramesh, Maharashtra</p>
+<div class="success-story">
+<p>"Organic practices reduced costs and improved quality." - Sunita,
+Karnataka</p>
+</div>
+</section>
+<div class="nav-buttons">
+<a href="ecommerce.html" class="next-btn">Next </a>
+</div> </body>
+</html>
+<footer>
+<div class="footer-section">
+<h3>About Organic Farming</h3>
+<p>Promoting sustainable and organic farming practices for healthy communities and environment.</p>
+</div>
+<div class="footer-section">
+<h3>Quick Links</h3>
+<a href="about.html">About Us</a>
+<a href="contact.html">Contact</a>
+<a href="privacy.html">Privacy Policy</a>
+<a href="terms.html">Terms of Service</a>
+</div>
+<div class="footer-section">
+<h3>Follow Us</h3>
+<div class="follow-us">
+<a href="https://www.facebook.com" target="_blank">Facebook</a> <a href="https://www.twitter.com" target="_blank">Twitter</a> <a href="https://www.instagram.com" target="_blank">Instagram</a> <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+</div>
+</div>
+</footer>
+</body>
+</html>
+
+
+
+
+5.Products
+
+
+</header>
+
+<section class="ecommerce">
+<div class="product">
+<h3>Organic Rice</h3>
+<p>?80/kg</p>
+<button>Buy Now</button>
+</div>
+<div class="product">
+<h3>Fresh Vegetables</h3>
+<p>?150/box</p>
+<button>Buy Now</button>
+</div>
+<div class="product">
+<h3>Organic Fertilizer</h3>
+<p>?250/pack</p>
+<button>Buy Now</button>
+</div>
+</section>
+
+<div class="nav-buttons">
+<a href="calender.html" class="next-btn">Next ?</a>
+</div>
+</body>
+</html>
+<footer>
+<div class="footer-section">
+<h3>About Organic Farming</h3>
+       <p>Promoting sustainable and organic farming practices for healthy communities and environment.</p>
+</div>
+<div class="footer-section">
+<h3>Quick Links</h3>
+<a href="about.html">About Us</a>
+<a href="contact.html">Contact</a>
+<a href="privacy.html">Privacy Policy</a>
+<a href="terms.html">Terms of Service</a>
+</div>
+<div class="footer-section">
+<h3>Follow Us</h3>
+<div class="follow-us">
+<a href="https://www.facebook.com" target="_blank">Facebook</a>
+<a href="https://www.twitter.com" target="_blank">Twitter</a>
+<a href="https://www.instagram.com" target="_blank">Instagram</a>
+<a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+
+
+
+6. Crop calender
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Crop Calendar</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1>Crop Calendar</h1>
+<a href="index.html"> Back to Home</a> </header>
+<section class="calendar">
+<table>
+<tr>
+<th>Month</th>
+<th>Crop</th>
+</tr>
+<tr>
+<td>January</td>
+<td>Carrots, Spinach</td>
+</tr>
+<tr>
+<td>March</td>
+<td>Wheat, Mustard</td>
+</tr>
+<tr>
+<td>July</td>
+<td>Paddy, Maize</td>
+</tr>
+</table>
+</section>
+<div class="nav-buttons">
+<a href="forum.html" class="next-btn">Next </a>
+</div>
+</body>
+</html>
+<footer>
+<div class="footer-section">
+<h3>About Organic Farming</h3>
+<p>Promoting sustainable and organic farming practices for healthy
+communities and environment.</p>
+</div>
+<div class="footer-section">
+<h3>Quick Links</h3>
+<a href="about.html">About Us</a>
+<a href="contact.html">Contact</a>
+<a href="privacy.html">Privacy Policy</a>
+<a href="terms.html">Terms of Service</a>
+</div>
+<div class="footer-section">
+<h3>Follow Us</h3>
+<div class="follow-us">
+<a href="https://www.facebook.com" target="_blank">Facebook</a> <a href="https://www.twitter.com" target="_blank">Twitter</a> <a href="https://www.instagram.com" target="_blank">Instagram</a> <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+</div>
+</div>
+</footer>
+</body>
+</html>
+
+
+
+
+
+7. Forum
+
+
+<a href="index.html">?? Back to Home</a>
+</header>
+
+<section class="forum">
+<div class="question">
+<strong>Q:</strong> Best organic fertilizer for tomatoes?<br>
+<strong>A:</strong> Compost and cow dung manure.
+</div>
+<div class="question">
+<strong>Q:</strong> How to control pests naturally?<br>
+<strong>A:</strong> Neem oil spray is effective.
+</div>
+</section>
+
+<div class="nav-buttons">
+<a href="index.html" class="next-btn">?? Back to Home</a>
+</div>
+</body>
+</html>
+<footer>
+<div class="footer-section">
+<h3>About Organic Farming</h3>
+       <p>Promoting sustainable and organic farming practices for healthy communities and environment.</p>
+</div>
+<div class="footer-section">
+<h3>Quick Links</h3>
+<a href="about.html">About Us</a>
+<a href="contact.html">Contact</a>
+<a href="privacy.html">Privacy Policy</a>
+<a href="terms.html">Terms of Service</a>
+</div>
+<div class="footer-section">
+<h3>Follow Us</h3>
+<div class="follow-us">
+<a href="https://www.facebook.com" target="_blank">Facebook</a>
+<a href="https://www.twitter.com" target="_blank">Twitter</a>
+<a href="https://www.instagram.com" target="_blank">Instagram</a>
+<a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+</div>
+</div>
+</footer>
+
+</body>
+</html>
+
+
